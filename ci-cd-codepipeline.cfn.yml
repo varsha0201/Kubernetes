@@ -40,7 +40,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default: varsha0201
+    Default: varshamohite0201@gmail.com
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100

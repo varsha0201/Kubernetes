@@ -8,7 +8,7 @@ import pytest
 import main
 
 SECRET = 'TestSecret'
-TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NjEzMDY3OTAsIm5iZiI6MTU2MDA5NzE5MCwiZW1haWwiOiJ3b2xmQHRoZWRvb3IuY29tIn0.IpM4VMnqIgOoQeJxUbLT-cRcAjK41jronkVrqRLFmmk'
+TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODI0Mjg3MzksIm5iZiI6MTU4MTIxOTEzOSwiZW1haWwiOiJ2YXJzaGFtb2hpdGUwMjAxQGdtYWlsLmNvbSJ9.UryuIlYILDEQuXtbrBCL0qPagqTkv5nKCgk1Xe1c8ME'
 EMAIL = 'wolf@thedoor.com'
 PASSWORD = 'huff-puff'
 
@@ -35,6 +35,6 @@ def test_auth(client):
                            data=json.dumps(body),
                            content_type='application/json')
 
-    assert response.status_code == 200
+    assert False
     token = response.json['token']
     assert token is not None
