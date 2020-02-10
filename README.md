@@ -39,3 +39,6 @@ For more detail about each of these steps, see the project lesson [here](https:/
 
 ## Loadbalancer URL:
 URL : aeba316994b6311ea97410a787450e55-1612872494.us-west-2.elb.amazonaws.com
+Endpoints URL: export TOKEN=`curl -d '{"email":"test@gmail.com","password":"test123"}' -H "Content-Type: application/json" -X POST http://aeba316994b6311ea97410a787450e55-1612872494.us-west-2.elb.amazonaws.com/auth  | jq -r '.token'`
+
+curl --request GET 'http://aeba316994b6311ea97410a787450e55-1612872494.us-west-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
